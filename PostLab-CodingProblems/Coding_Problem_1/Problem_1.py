@@ -11,9 +11,9 @@ from stats import mean, median, mode
 user_input = input("Enter a list of numbers separated by commas: ")
 
 # Split User Input
-num = [float(x) for x in user_input.split(',')]
+data = [float(x) for x in user_input.split(',')]
 
 # Display Results
-print("Mean:", mean(num))
-print("Median:", median(num))
-print("Mode:", mode(num))
+print("Mean:", mean(data))
+print("Median:", median(data))
+print("Mode:", mode(data))
