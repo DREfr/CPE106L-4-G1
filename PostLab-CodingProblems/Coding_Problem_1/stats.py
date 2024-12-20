@@ -1,12 +1,12 @@
-#Mean Function
+# Mean Function
 def mean(num):
-        if not num:
+    if not num:
         return None
     return sum(num) / len(num)
 
-#Median Function
+# Median Function
 def median(num):
-     if not num:
+    if not num:
         return None
     num.sort()
     n = len(num)
@@ -15,13 +15,12 @@ def median(num):
     else:
         mid1 = num[(n // 2) - 1]
         mid2 = num[n // 2]
-    return (mid1 + mid2) / 2
+        return (mid1 + mid2) / 2
 
-
-#Mode Function
+# Mode Function
 from collections import Counter
 def mode(num): 
-       if not num:
+    if not num:
         return None
     n = len(num)
     data = Counter(num)
@@ -31,6 +30,6 @@ def mode(num):
     modes = [key for key, value in data.items() if value == max_frequency]
 
     # If all numbers appear the same number of times, there is no mode
-    if len(modes) == n:
+    if len(modes) == len(set(num)):
         return "No mode"
     return modes if len(modes) > 1 else modes[0]
