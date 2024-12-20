@@ -16,3 +16,4 @@ data = [float(x) for x in user_input.split(',')]
 # Display Results
 print("Mean:", mean(data))
 print("Median:", median(data))
+print("Mode:", mode(data))
